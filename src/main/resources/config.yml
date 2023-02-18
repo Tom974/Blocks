@@ -1,0 +1,7 @@
+messages:
+  prefix: "&5&lPlasma&f&lMC &8» &f"
+  blocks-broken: "&cYou have broken %blocks% blocks!"
+  invalid-arguments: "&cInvalid arguments!"
+  set-blocks: "&cYou have set %player%'s blocks to %blocks%!"
+  autosave-message: "&fAutosaved blocks of %users% users!"
+  autosave-interval: 50 # in seconds

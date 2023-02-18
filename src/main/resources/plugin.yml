@@ -1,0 +1,13 @@
+name: Blocks
+version: '${project.version}'
+main: me.mynqme.blocks.Blocks
+authors: [ MyNqme ]
+description: A plugin replacement of ezblocks that actually works!
+commands:
+  blocks:
+    description: Shows how many blocks you have broken
+    usage: /blocks
+    aliases: [ broken ]
+    permission: blocks.command.blocks
+    permission-message: "&cYou do not have permission to use this command!"
+    default: true
