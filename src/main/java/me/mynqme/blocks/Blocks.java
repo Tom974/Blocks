@@ -4,6 +4,7 @@ import de.leonhard.storage.SimplixBuilder;
 import de.leonhard.storage.internal.settings.ConfigSettings;
 import me.mynqme.blocks.db.Database;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import de.leonhard.storage.Yaml;
@@ -48,7 +49,7 @@ public final class Blocks extends JavaPlugin {
                     if (op.isOnline()) {
                         Player target = Bukkit.getPlayer(op.getName());
                         if (target != null) {
-                            target.sendMessage("§5§lPlasma§f§lMC §8» §fSaved all broken blocks to database!");
+                            target.sendMessage(ChatColor.translateAlternateColorCodes('&', config.getString("messages.prefix") + config.getString("messages.admin-message")));
                         }
                     }
                 });

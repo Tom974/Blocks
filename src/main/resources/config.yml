@@ -1,4 +1,5 @@
 messages:
+  admin-message: "Saved all broken blocks to the database!"
   prefix: "&5&lPlasma&f&lMC &8» &f"
   blocks-broken: "&cYou have broken %blocks% blocks!"
   invalid-arguments: "&cInvalid arguments!"
