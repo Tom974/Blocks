@@ -44,7 +44,9 @@ public class Database {
     }
 
     public void setBlocks(UUID uuid, int amount) {
-        Bukkit.getLogger().info("Saving blocks for " + uuid + "... (" + amount + ")");
+        if (this.plugin.config.getBoolean("debug")) {
+            Bukkit.getLogger().info("Saving blocks for " + uuid + "... (" + amount + ")");
+        }
         Connection conn = null;
         PreparedStatement ps = null;
         try {
@@ -68,7 +70,7 @@ public class Database {
         try {
             conn = pool.getConnection();
             ps = conn.prepareStatement("SELECT * FROM `blocks_broken` WHERE `uuid` = ?");
-            ps.setString(1,uuid.toString());
+            ps.setString(1, uuid.toString());
             rs = ps.executeQuery();
             if (rs.next()) {
                 int blocks = rs.getInt("blocks");

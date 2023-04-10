@@ -2,7 +2,6 @@ package me.mynqme.blocks;
 
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import org.bukkit.entity.Player;
-
 import javax.annotation.Nonnull;
 
 public class Placeholder extends PlaceholderExpansion

@@ -11,7 +11,6 @@ import de.leonhard.storage.Yaml;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.io.File;
-import java.lang.annotation.Target;
 import java.util.HashMap;
 import java.util.UUID;
 
@@ -37,7 +36,6 @@ public final class Blocks extends JavaPlugin {
         for (Player p : Bukkit.getOnlinePlayers()) {
             UUID uuid = p.getUniqueId();
             int blocks = this.database.getBlocks(uuid);
-            p.sendMessage("You have broken " + blocks + " blocks!");
             this.blocks.put(uuid, blocks);
         }
 
